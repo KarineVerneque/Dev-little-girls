@@ -21,9 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-qt(mt!fh6=dn4n9v+*8x@@%rdmk9@(ezk%$-9q^p&o^92grdt6'
+SECRET_KEY = 'django-insecure-qt(mt!fh6=dn4n9v+*8x@@%rdmk9@(ezk%$-9q^p&o^92grdt6'
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-qt(mt!fh6=dn4n9v+*8x@@%rdmk9@(ezk%$-9q^p&o^92grdt6')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -141,7 +140,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-# Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+
