@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-qt(mt!fh6=dn4n9v+*8x@@%rdmk9@(ezk%$-9q^p&o^92grdt6
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['*', 'devlittlegirls.pythonanywhere.com']
+ALLOWED_HOSTS = ['*', '.pythonanywhere.com']
 
 
 # Application definition
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'site_devlittlegirls_app',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
