@@ -18,3 +18,7 @@ def index(request):
     return render(request, 'Django/index.html', dicionario_contexto)
 
  #   return render(request, 'django/more.html', dicionario_contexto2)
+def about(request):
+    return render(
+        request,
+        "http://devlittlegirls.pythonanywhere.com/",)
